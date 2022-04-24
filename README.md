@@ -1,16 +1,16 @@
 # calculator-retry
 ===================
-1. Make the calculator in HTML
+1. Make the calculator in HTML :heavy_check_mark:
     * Create the outer box
     * Create an area for the display
     * Create an area for the buttons
         - It should be ok to hardcode the button locations
 
 2. Make the calculator work
-    * AC functionality: :heavy_check_mark:
-        - Clear display 
-        - Clear memory of previous calculations
-        - Clear current variable
+    * AC functionality:
+        - Clear display :heavy_check_mark:
+        - Clear memory of previous calculations 
+        - Clear current variable :heavy_check_mark:
     * +/- functionality:
         - Turn display variable to positive or negative
         - Turn current variable to positive or negative
