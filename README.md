@@ -7,8 +7,8 @@
         - It should be ok to hardcode the button locations
 
 2. Make the calculator work
-    * AC functionality:
-        - Clear display
+    * AC functionality: :heavy_check_mark:
+        - Clear display 
         - Clear memory of previous calculations
         - Clear current variable
     * +/- functionality:
