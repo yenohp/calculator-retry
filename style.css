@@ -54,6 +54,7 @@ button {
     height: 78px;
     border-radius: 10px;
     border: 2px solid black;
+    font-size: 30px;
 }
 
 .row-5 {
@@ -65,17 +66,25 @@ button {
 }
 
 .operators {
-    background-color: orange;
+    background-color: #ffa500;
+}
+
+.operators:active {
+    background-color: #ffb325;
 }
 
 .modifiers {
-    background-color: royalblue;
+    background-color: #4169e1;
+}
+
+.modifiers:active {
+    background-color: #4874f8;
 }
 
 .numbers {
-    background-color: teal;
+    background-color: #008080;
 }
 
-.click {}
-
-.activate {}
+.numbers:active {
+    background-color: #00b3b3;
+}
