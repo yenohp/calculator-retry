@@ -6,6 +6,7 @@ const decimalBttn = document.querySelector('#decimal');
 let arr = [];
 let memory = [];
 let value = 0;
+
 for (let button of buttons) {
     button.addEventListener('click', (e) => {
         // if the array is of length 9, stop taking inputs
@@ -38,15 +39,28 @@ for (let button of buttons) {
         // Activate an operator
         else if (current.className == 'operators') {
             // Make it so only one operator can be activated
-            memory.push(value);
-            value = 0;
-            activate(current);
+            if (arr.length == 0) return;
+            else if (value == 0) return;
+            if (memory.length < 4) {
+                memory.push(value);
+                memory.push(current.innerText);
+                value = 0;
+                for (let num of arr) arr.pop();
+                displayText.innerText = '0';
+                activate(current);
+            }
+            if (memory.length == 4) {
+                let lastOperator = memory.pop();
+                let x, y, o;
+                [x, o, y] = memory;
+                console.log(operate(o, x, y));
+            }
         }
-        // If an operator is clicked
-
     })
 }
 
+
+//===================================================================
 // Function for clicking a button
 const activate = function (button) {
     let counter = 0;
@@ -86,6 +100,8 @@ const empty = function (arr) {
     // empty curr arr
     if (arr.length == 0) {
         deactivate();
+        let length2 = memory.length;
+        for (let i = 0; i < length2; i++) memory.pop();
         return;
     }
     else {
@@ -98,7 +114,6 @@ const empty = function (arr) {
     displayText.innerText = '0';
     value = 0;
     decimalBttn.removeAttribute('disabled');
-
     //remove activate from all operators
     deactivate();
 }
