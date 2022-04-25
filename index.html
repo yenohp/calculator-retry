@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>TOP | Project: Calculator</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <title>TOP | Project: Calculator</title>
+    </head>
 
-<body>
-    <div class="calcBody">
-        <div class="calcDisplay">
-            <h1>0</h1>
+    <body>
+        <div class="calcBody">
+            <div class="calcDisplay">
+                <h1>0</h1>
+            </div>
+            <div class="calcButtons">
+                <div class="row-1">
+                    <button class="modifiers" id="clear">AC</button><button class="modifiers"
+                        id="sign">+/-</button><button class="modifiers" id="percentify">%</button><button
+                        class="operators" id="divide">/</button>
+                </div>
+                <div class="row-2">
+                    <button class="numbers">7</button><button class="numbers">8</button><button
+                        class="numbers">9</button><button class="operators" id="multiply">*</button>
+                </div>
+                <div class="row-3">
+                    <button class="numbers">4</button><button class="numbers">5</button><button
+                        class="numbers">6</button><button class="operators" id="subtract">-</button>
+                </div>
+                <div class="row-4">
+                    <button class="numbers">1</button><button class="numbers">2</button><button
+                        class="numbers">3</button><button class="operators" id="add">+</button>
+                </div>
+                <div class="row-5">
+                    <button class="numbers" id="zero">0</button><button class="numbers" id="decimal">.</button><button
+                        class="operators" id="equals">=</button>
+                </div>
+            </div>
         </div>
-        <div class="calcButtons">
-            <div class="row-1">
-                <button class="modifiers" id="clear">AC</button><button class="modifiers" id="sign">+/-</button><button
-                    class="modifiers" id="percentify">%</button><button class="operators" id="divide">/</button>
-            </div>
-            <div class="row-2">
-                <button class="numbers">7</button><button class="numbers">8</button><button
-                    class="numbers">9</button><button class="operators" id="multiply">*</button>
-            </div>
-            <div class="row-3">
-                <button class="numbers">4</button><button class="numbers">5</button><button
-                    class="numbers">6</button><button class="operators" id="subtract">-</button>
-            </div>
-            <div class="row-4">
-                <button class="numbers">1</button><button class="numbers">2</button><button
-                    class="numbers">3</button><button class="operators" id="add">+</button>
-            </div>
-            <div class="row-5">
-                <button class="numbers" id="zero">0</button><button class="numbers" id="decimal">.</button><button
-                    class="operators" id="equals">=</button>
-            </div>
-        </div>
-    </div>
-</body>
+    </body>
 
 </html>

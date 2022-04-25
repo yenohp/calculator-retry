@@ -8,18 +8,24 @@ let memory = [];
 let value = 0;
 for (let button of buttons) {
     button.addEventListener('click', (e) => {
+        // if the array is of length 9, stop taking inputs
         let current = e.target;
         // Only change the innerText if it is a number
         if (current.className == 'numbers') {
             // Dont add zeros if the first number is zero
             if (arr[0] == 0) arr.pop();
             update(current);
-
-            // If the % is clicked
         }
         // If the decimal is clicked
-        else if (current.id == 'decimal') {
+        if (current.id == 'decimal') {
             current.setAttribute('disabled', 'true');
+        }
+        if (current.id == 'percentify') {
+            value /= 100;
+            displayText.innerText = value;
+            let counter = arr.length;
+            for (let i = 0; i < counter; i++) arr.pop();
+            arr.push(value);
         }
         // If the +/- is clicked
         else if (current.id == 'sign') {
@@ -66,7 +72,12 @@ const update = function (button) {
 const empty = function (arr) {
     console.log('EMPTYING');
     // empty curr arr
-    if (arr.length == 0) return;
+    if (arr.length == 0) {
+        for (let operator of operators) {
+            operator.classList.remove('activate');
+        }
+        return;
+    }
     else {
         let length = arr.length;
         for (let i = 0; i < length; i++) arr.pop();
@@ -77,6 +88,11 @@ const empty = function (arr) {
     displayText.innerText = '0';
     value = 0;
     decimalBttn.removeAttribute('disabled');
+
+    //remove activate from all operators
+    for (let operator of operators) {
+        operator.classList.remove('activate');
+    }
 }
 
 // Create a new function 'operate' that takes an operator and 2 numbers and then calls one of the operator functions on the numbers

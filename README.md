@@ -17,8 +17,8 @@
     * % functionality: 
         - Turn display variable into percentage of 100
         - Turn current variable into percentage of 100
-    * Operators functionality:
-        - Add, subtract, multiply, divide :heavy_check_mark:
+    * Operators functionality:  :heavy_check_mark:
+        - Add, subtract, multiply, divide
     * Equals functionality:
         - Return solution to operation.
     * Decimal functionality: :heavy_check_mark:
