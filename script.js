@@ -37,9 +37,10 @@ for (let button of buttons) {
         }
         // Activate an operator
         else if (current.className == 'operators') {
+            // Make it so only one operator can be activated
             memory.push(value);
             value = 0;
-            current.classList.add('activate');
+            activate(current);
         }
         // If an operator is clicked
 
@@ -48,7 +49,18 @@ for (let button of buttons) {
 
 // Function for clicking a button
 const activate = function (button) {
-
+    let counter = 0;
+    for (let operate of operators) {
+        if (operate.className == 'operators activate') counter++;
+    }
+    if (counter >= 1) deactivate();
+    button.classList.add('activate');
+    counter = 0;
+}
+const deactivate = function () {
+    for (let operate of operators) {
+        operate.classList.remove('activate');
+    }
 }
 // Change the sign +/-
 const changeSign = function () {
@@ -73,9 +85,7 @@ const empty = function (arr) {
     console.log('EMPTYING');
     // empty curr arr
     if (arr.length == 0) {
-        for (let operator of operators) {
-            operator.classList.remove('activate');
-        }
+        deactivate();
         return;
     }
     else {
@@ -90,9 +100,7 @@ const empty = function (arr) {
     decimalBttn.removeAttribute('disabled');
 
     //remove activate from all operators
-    for (let operator of operators) {
-        operator.classList.remove('activate');
-    }
+    deactivate();
 }
 
 // Create a new function 'operate' that takes an operator and 2 numbers and then calls one of the operator functions on the numbers
