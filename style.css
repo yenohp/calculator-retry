@@ -88,3 +88,7 @@ button {
 .numbers:active {
     background-color: #00b3b3;
 }
+
+#decimal:disabled {
+    color: black;
+}
