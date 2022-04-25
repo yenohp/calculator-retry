@@ -70,7 +70,7 @@ button {
 }
 
 .operators:active {
-    background-color: #ffb325;
+    background-color: #eebd61;
 }
 
 .modifiers {
@@ -91,4 +91,8 @@ button {
 
 #decimal:disabled {
     color: black;
+}
+
+.activate {
+    background-color: #eebd61;
 }

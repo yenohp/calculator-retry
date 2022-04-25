@@ -7,11 +7,11 @@
         - It should be ok to hardcode the button locations
 
 2. Make the calculator work
-    * AC functionality:
-        - Clear display :heavy_check_mark:
+    * AC functionality:  :heavy_check_mark:
+        - Clear display
         - Clear memory of previous calculations 
-        - Clear current variable :heavy_check_mark:
-    * +/- functionality:
+        - Clear current variable
+    * +/- functionality:  :heavy_check_mark:
         - Turn display variable to positive or negative
         - Turn current variable to positive or negative
     * % functionality: 
@@ -21,10 +21,10 @@
         - Add, subtract, multiply, divide :heavy_check_mark:
     * Equals functionality:
         - Return solution to operation.
-    * Decimal functionality:
+    * Decimal functionality: :heavy_check_mark:
         - Create one decimal following current variable
 
-3. Style the calculator
+3. Style the calculator  :heavy_check_mark:
     * Style outer box
     * Style display
     * Style buttons
