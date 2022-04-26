@@ -45,7 +45,8 @@ for (let button of buttons) {
                 memory.push(value);
                 memory.push(current.innerText);
                 value = 0;
-                for (let num of arr) arr.pop();
+                let x = arr.length;
+                for (let i = 0; i < x; i++) arr.pop();
                 displayText.innerText = '0';
                 activate(current);
             }
@@ -53,7 +54,12 @@ for (let button of buttons) {
                 let lastOperator = memory.pop();
                 let x, y, o;
                 [x, o, y] = memory;
+                value = operate(o,x,y);
+                displayText.innerText = value;
+                arr.push(value);
                 console.log(operate(o, x, y));
+                let co = memory.length;
+                for(let i = 0; i < co; i++) memory.pop();
             }
         }
     })
@@ -121,7 +127,7 @@ const empty = function (arr) {
 // Create a new function 'operate' that takes an operator and 2 numbers and then calls one of the operator functions on the numbers
 const operate = function (operator, x, y) {
     if (operator == '+') {
-        return x + y;
+    return parseInt(x) + parseInt(y);
     } else if (operator == '-') {
         return x - y;
     } else if (operator == '*') {
